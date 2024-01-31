@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\begin{document}
+\huge
+\begin{equation}
+f(x, y) = \frac{1}{2\pi\sigma^2}e^{-\frac{x^2+y^2}{2\sigma^2}}
+\end{equation}
+\\
+
+\begin{equation}
+
+\begin{aligned}
+\frac{\partial I}{\partial x}(x, y) = I(x + 1, y) - I(x - 1, y)\\
+\frac{\partial I}{\partial x}(x, y) = I(x + 1, y) - I(x - 1, y)
+\end{aligned}
+\end{equation}
+\\
+
+\begin{equation}
+\label{eq:3}
+\begin{aligned}
+G_x = h_x * A \\
+G_y = h_y * A 
+\end{aligned}
+\end{equation}
+\\
+
+%Roberts
+\begin{equation}
+\begin{pmatrix}
+1 & 0 \\
+0 & -1 
+\end{pmatrix}
+\begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}
+\end{equation}
+\\
+
+%Sobel
+\begin{equation}
+\begin{pmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
+-1 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+-1 & -2 & -1 \\
+0 & 0 & 0 \\
+1 & 2 & 1
+\end{pmatrix}
+\end{equation}
+\\
+
+%Prewitt
+\begin{equation}
+\begin{pmatrix}
+-1 & 0 & 1 \\
+-1 & 0 & 1 \\
+-1 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+-1 & -1 & -1 \\
+0 & 0 & 0 \\
+1 & 1 & 1
+\end{pmatrix}
+\end{equation}
+\\
+
+%Scharr
+\begin{equation}
+\begin{pmatrix}
+-3 & 0 & 3 \\
+-10 & 0 & 10 \\
+-3 & 0 & 3
+\end{pmatrix}
+\begin{pmatrix}
+-3 & -10 & -3 \\
+0 & 0 & 0 \\
+3 & 10 & 3
+\end{pmatrix}
+\end{equation}
+\\
+
+\begin{equation}
+G = \sqrt{G_x^2 + G_y^2}
+\end{equation}
+\\
+
+\begin{equation}
+\Theta = \arctan\left(\frac{G_y}{G_x}\right)
+\end{equation}
+\\
+
+
+\end{document}
